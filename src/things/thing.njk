@@ -1,0 +1,51 @@
+---
+layout: page.njk
+pagination:
+  data: things
+  size: 1
+  alias: thingId
+permalink: '{{ thingId }}.html'
+# {# e.g: techniques/chroma-key.html #}
+---
+{% set category = things[thingId].category %}
+
+{% set thing = things[thingId] %}
+<h1>{{ thing | show_thing }}</h1>
+<div>
+  {{ thing.description | render | safe }}
+</div>
+<div>
+
+{# For devlogs, show list of experiments #}
+{# TODO this should go in a partial #} 
+{% if thing.experiments %}
+<ul>
+  {% for experimentId in thing.experiments %}
+    <li>
+      {{ link_thing('/experiments/'+experimentId) }}
+      {# TODO show an image if available #} 
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{# Show assets (images and videos) #}
+{% for asset in thing.assets %}
+  {% if asset.type == 'video' %}
+    <video controls autoplay>
+      <source src={{asset.src}} type="video/mp4" />
+    </video>
+  {% elif asset.type == 'image' %}
+    <img src={{asset.src}} />
+  {% else %}
+    [Unimplemented asset type: {{asset.type}}]
+  {% endif %}
+  <br>
+{% endfor %}
+</div>
+
+<br>
+<br>
+<br>
+
+{{ category | link_category(category) }}

@@ -1,0 +1,34 @@
+---
+layout: page.njk
+pagination:
+  data: categories
+  size: 1
+  alias: category
+permalink: '{{ category }}/index.html'
+#        {# e.g: techniques/index.html #}
+---
+<h1>{{ category }}</h1>
+
+{% set theseThings = u.selectByCategory(things, category) %}
+
+{% set subcategories = u.uniq(u.pick(u.objValues(theseThings), "subcategory")) %}
+{# this also creates a null subcategory for things w no defined subcategory #}
+
+{% for subcategory in subcategories %}
+{% if subcategory %}
+  <h3> {{subcategory}} </h5>
+{% endif %}
+<ul>
+  {% for thingId, thing in theseThings %}
+    {% if thing.subcategory == subcategory %}
+      <li>{{ link_thing(thing) }}</li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}
+
+<br>
+<br>
+<br>
+<br>
+<a href="/">plunderludics</a>

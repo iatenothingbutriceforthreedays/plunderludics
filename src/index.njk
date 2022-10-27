@@ -1,0 +1,29 @@
+<h1>
+  plunderludics
+</h1>
+
+<div>
+  plunderludics means making games out of games
+</div>
+
+<ul>
+{% for category in categories %}
+  <li>
+  {{ category | link_category(category) }}
+  </li>
+{% endfor %}
+</ul>
+
+
+{# spit out thing data for debug #}
+{% for i in range(0, 40) %}
+  <br>
+{% endfor %}
+
+<pre style="white-space: pre-wrap;">
+{{ categories | dump(2) }}
+</pre>
+
+<pre style="white-space: pre-wrap;">
+{{ things | dump(2) }}
+</pre>
