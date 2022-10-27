@@ -1,6 +1,14 @@
 {
+  "name": "plunderludics-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'plunderludics'",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@11ty/eleventy": "^1.0.2",
+    "gh-pages": "^4.0.0"
   },
   "dependencies": {
     "@root/walk": "^1.1.0"
