@@ -1,8 +1,8 @@
 # Checkout gh-pages branch
-git checkout gh-pages
+git checkout gh-pages # TODO find a way around warnings for local files or whatever
 
-# Merge changes from main
-git merge -m "merge" main
+# Mirror main
+git reset --hard origin/main
 
 # Build files
 npm run build
