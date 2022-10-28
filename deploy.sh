@@ -1,11 +1,11 @@
-# Build files
-npm run build
-
 # Checkout gh-pages branch
 git checkout gh-pages
 
 # Merge changes from main
 git merge -m "merge" main
+
+# Build files
+npm run build
 
 # Add and commit built files
 git add docs
