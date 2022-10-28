@@ -5,7 +5,7 @@ npm run build
 git checkout gh-pages
 
 # Merge changes from main
-git merge main
+git merge -m "merge" main
 
 # Add and commit built files
 git add docs
