@@ -7,6 +7,9 @@ pagination:
 permalink: '{{ thingId }}.html'
 # {# e.g: techniques/chroma-key.html #}
 ---
+{# A lot of this page should be moved out into partials that only render for
+   the specific categories where they apply #}
+  
 {% set category = things[thingId].category %}
 
 {% set thing = things[thingId] %}
@@ -15,19 +18,6 @@ permalink: '{{ thingId }}.html'
   {{ thing.description | render | safe }}
 </div>
 <div>
-
-{# For devlogs, show list of experiments #}
-{# TODO this should go in a partial #} 
-{% if thing.experiments %}
-<ul>
-  {% for experimentId in thing.experiments %}
-    <li>
-      {{ link_thing('/experiments/'+experimentId) }}
-      {# TODO show an image if available #} 
-    </li>
-  {% endfor %}
-</ul>
-{% endif %}
 
 {# Show assets (images and videos) #}
 {% for asset in thing.assets %}
@@ -47,6 +37,25 @@ permalink: '{{ thingId }}.html'
   {% endif %}
   <br>
 {% endfor %}
+
+{# Show all the relations to things in other categories #}
+{% for otherCategory in categories %}
+  {% if thing[otherCategory] %}
+  <h3> {{ otherCategory }} </h3> 
+  {# TODO would be nice to customise this header text - e.g. a tool is 'useful for' x y z techniques #}
+  <ul>
+    {% for otherThingId in thing[otherCategory] %}
+      <li>
+        {{ link_thing('/'+otherCategory+'/'+otherThingId) }} 
+        {# should really have a method for constructing the path #}
+        {# TODO would be nice to show an image here if available/appropriate #} 
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endfor %}
+
+
 </div>
 
 <br>

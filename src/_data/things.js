@@ -17,6 +17,7 @@
 
 const { debug } = require('console');
 const fs = require('fs');
+const assert = require('assert');
 const {
   lstat,
   readdir,
@@ -24,6 +25,10 @@ const {
 } = require('fs/promises');
 const path = require('path');
 
+// these are also defined in nunjucks-env.js, not good, need to reorganise things
+const uniq = (vals) => {
+  return [...new Set(vals)]
+}
 const objMapValues = (obj, fn) => {
   return Object.fromEntries(
     Object.entries(obj).map(
@@ -121,6 +126,7 @@ const flattenThings = things => {
           {
             ...v,
             id: newKey,
+            localId: k,
             category
           }                   // value
         ]
@@ -130,8 +136,52 @@ const flattenThings = things => {
 }
 // listFileTreeRecursive("./src/_data/").then(_ => console.dir(_, {depth : 20}));
 
+// make all the inter-category relations bidirectional
+// e.g. if bizhawk.techniques contains 'load-state', then load-state.tools should contain bizhawk
+const symmetricClosureInPlace = (flatThings) => {
+  const categories = uniq(Object.values(flatThings).map(v => v.category));
+
+  objMapValues(flatThings, thing => {
+    objMap(thing, (v, k) => {
+      if (categories.includes(k)) {
+        // thing has a key like 'techniques'
+        const associatedThingBaseNames = v;
+        associatedThingBaseNames.forEach(associatedThingBaseName => {
+          associatedThingId = '/'+k+'/'+associatedThingBaseName;
+          // check if it actually exists
+          const associatedThing = flatThings[associatedThingId]
+          if (associatedThing) {
+            // make sure the category is right, otherwise something is really wrong
+            assert(associatedThing.category == k);
+            // set the reverse property on the associated thing
+            const reverseRelation = associatedThing[thing.category];
+            if (reverseRelation instanceof Array) {
+              // if symmetric relation doesn't exist, add it
+              if (!reverseRelation.includes(thing.localId)) {
+                reverseRelation.push(thing.localId);
+              }
+            } else if (reverseRelation == undefined) {
+              // no reverse relation at all, add one and populate it
+              associatedThing[thing.category] = [thing.localId];
+            } else {
+              console.warn(`Got unexpected type ${typeof reverseRelation} for ${associatedThing.id}.${thing.category}`);
+              console.log(reverseRelation);
+            }
+          } else {
+            console.warn(`${thing.id}.${k} includes non-existent thing ${associatedThingId}`);
+          }
+        });
+      };
+      return [0,0]; //urgh
+    });
+    return 0; //urgh
+  });
+};
+
 const unFlatThings = getThings();
 const flatThings = flattenThings(unFlatThings);
+
+symmetricClosureInPlace(flatThings);
 
 // console.dir(flatThings, {depth : 20});
 
