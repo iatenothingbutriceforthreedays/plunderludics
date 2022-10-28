@@ -16,7 +16,7 @@ module.exports = {
   techniques: [
     'cutting'
   ],
-  inspirations: [
+  inspiration: [
     'boulder-blues'
   ]
 };

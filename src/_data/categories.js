@@ -7,6 +7,7 @@ module.exports = [
   // "ideas",
   "our-plunderludics",
   "other-plunderludics",
+  'inspiration',
   "techniques",
   "experiments",
   "tools",
