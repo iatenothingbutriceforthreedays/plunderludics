@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "env NODE_ENV=production npx eleventy --input=src --output=docs",
+    "clean": "rm -rf _site docs",
     "serve": "npx eleventy --serve --input=src",
     "debug": "DEBUG=* npx eleventy"
   },
