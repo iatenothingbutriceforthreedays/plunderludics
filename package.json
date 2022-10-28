@@ -2,7 +2,7 @@
   "name": "plunderludics-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "env NODE_ENV=production npx eleventy --pathprefix 'plunderludics'",
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'plunderludics' --input=src --output=docs",
     "serve": "npx eleventy --serve",
     "debug": "DEBUG=* npx eleventy"
   },
