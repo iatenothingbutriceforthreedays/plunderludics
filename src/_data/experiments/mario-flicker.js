@@ -6,7 +6,7 @@ module.exports = {
   assets: [
     {
       type: "video",
-      src: "/documentation/2022-21-10/mario-flicker.mp4"
+      src: "/documentation/2022-10-21/mario-flicker.mp4"
     },
   ],
   tools: [
@@ -15,8 +15,8 @@ module.exports = {
   ],
   techniques: [
     'cutting'
+    // same-game
   ],
   inspiration: [
-    'boulder-blues'
   ]
 };
