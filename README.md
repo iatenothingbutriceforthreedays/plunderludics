@@ -3,6 +3,7 @@
 add/change data in `_data/`
 
 add pages or change layout in `src/index.njk`, `src/things/category.njk` and `src/things/thing.njk`
+plain html or other files under `src/` will also work
 
 
 install:
