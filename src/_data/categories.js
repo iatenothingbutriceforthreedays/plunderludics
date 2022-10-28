@@ -4,9 +4,11 @@
 // TODO move this out of _data and into addGlobal somewhere else
 
 module.exports = [
-  "experiments",
-  "ideas",
+  // "ideas",
+  "our-plunderludics",
+  "other-plunderludics",
   "techniques",
+  "experiments",
   "tools",
   "devlogs"
 ]
