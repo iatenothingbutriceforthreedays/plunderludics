@@ -6,7 +6,7 @@ module.exports = {
   assets: [
     {
       type: "video",
-      src: "/documentation/21-10-2022/mario-flicker.mp4"
+      src: "/documentation/2022-21-10/mario-flicker.mp4"
     },
   ],
   tools: [
