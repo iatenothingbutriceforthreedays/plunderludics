@@ -8,15 +8,15 @@ also tried blending via checkerboard matte. also tried blending using a third n6
   assets: [
     {
       type: "video",
-      src: "/documentation/2022-21-10/mario-lylat-system.mp4"
+      src: "/documentation/2022-10-21/mario-lylat-system.mp4"
     },
     {
       type: "image",
-      src: "/documentation/2022-21-10/checkers.jpg"
+      src: "/documentation/2022-10-21/checkers.jpg"
     },
     {
       type: "video",
-      src: "/documentation/2022-21-10/killer-instinct-matte.mp4"
+      src: "/documentation/2022-10-21/killer-instinct-matte.mp4"
     }
   ],
   techniques: [

@@ -1,5 +1,5 @@
 module.exports = {
-  date: "2022-21-10",
+  date: "2022-10-21",
   experiments: [
     'mario-lylat-system',
     'mario-flicker',
