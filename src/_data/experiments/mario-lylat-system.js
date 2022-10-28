@@ -19,6 +19,9 @@ also tried blending via checkerboard matte. also tried blending using a third n6
       src: "/documentation/21-10-2022/killer-instinct-matte.mp4"
     }
   ],
+  techniques: [
+    'blending'
+  ],
   tools: [
     'bizhawk',
     'touchdesigner'

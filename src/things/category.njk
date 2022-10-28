@@ -22,7 +22,15 @@ permalink: '{{ category }}/index.html'
   {% for thingId, thing in theseThings %}
     {# TODO think about sorting: e.g. devlogs and experiments should sort by date #}
     {% if thing.subcategory == subcategory %}
-      <li>{{ link_thing(thing) }}</li>
+      <li>
+        {{ link_thing(thing) }}
+        {% if  thing.url %} (<a href={{thing.url}}>link</a>) {% endif %}
+        {% if  thing.author %} by  {{ thing.author }} {% endif %}
+        {% if  thing.description %}
+          : {{ thing.description | render | safe }}
+        {% endif %}
+      </li>
+      {# perhaps should only show description if it's not too long #}
     {% endif %}
   {% endfor %}
 </ul>

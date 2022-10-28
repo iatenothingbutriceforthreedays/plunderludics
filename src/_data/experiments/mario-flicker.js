@@ -13,7 +13,10 @@ module.exports = {
     'bizhawk',
     'touchdesigner'
   ],
-  inspiration: [
+  techniques: [
+    'cutting'
+  ],
+  inspirations: [
     'boulder-blues'
   ]
 };

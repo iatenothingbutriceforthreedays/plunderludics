@@ -7,5 +7,9 @@ module.exports = {
     'write-ram',
     'save-state',
     'load-state',
+  ],
+  url: "https://tasvideos.org/BizHawk",
+  "other-plunderludics": [
+    "sonic-but"
   ]
 };

@@ -14,11 +14,21 @@ permalink: '{{ thingId }}.html'
 
 {% set thing = things[thingId] %}
 <h1>{{ thing | show_thing }}</h1>
-<div>
-  {{ thing.description | render | safe }}
-</div>
-<div>
 
+<div>
+  {% if  thing.author %}
+    by  {{ thing.author }}
+    <br>
+  {% endif %}
+
+  {{ thing.description | render | safe }}
+  {% if thing.url %}
+    <br>
+    (<a href={{thing.url}}>external link</a>)
+  {% endif %}
+</div>
+
+<div>
 {# Show assets (images and videos) #}
 {% for asset in thing.assets %}
   {% if asset.type == 'video' %}
