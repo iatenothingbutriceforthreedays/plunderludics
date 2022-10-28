@@ -16,3 +16,6 @@ git reset $(git commit-tree HEAD^{tree} -m "Erase history")
 
 # Force push
 git push -f
+
+# Back to main branch
+git checkout main
