@@ -16,10 +16,11 @@ permalink: '{{ category }}/index.html'
 
 {% for subcategory in subcategories %}
 {% if subcategory %}
-  <h3> {{subcategory}} </h5>
+  <h4> {{subcategory}} </h4>
 {% endif %}
 <ul>
   {% for thingId, thing in theseThings %}
+    {# TODO think about sorting: e.g. devlogs and experiments should sort by date #}
     {% if thing.subcategory == subcategory %}
       <li>{{ link_thing(thing) }}</li>
     {% endif %}

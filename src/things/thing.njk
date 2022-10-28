@@ -33,7 +33,12 @@ permalink: '{{ thingId }}.html'
 {% for asset in thing.assets %}
   {% if asset.type == 'video' %}
     <video controls autoplay>
-      <source src={{asset.src}} type="video/mp4" />
+      {# Huge hack until we find a better way to host large files.
+         The video files are on git LFS which apparently isn't compatible
+         with github pages :(
+         So point to the asset in the public repo instead.
+      #}
+      <source src='https://github.com/iatenothingbutriceforthreedays/plunderludics/blob/main/src/{{asset.src}}?raw=true' type="video/mp4" />
     </video>
   {% elif asset.type == 'image' %}
     <img src={{asset.src}} />
