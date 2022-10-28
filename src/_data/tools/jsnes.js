@@ -1,7 +1,7 @@
 module.exports = {
   name: "jsnes",
   description: `SNES emulator with somewhat easy integration with web browser stuff.
-  <a href="nes.mut.media"> mut's plunderludics </a> uses this mainly`,
+  <a href="nes.mut.media">mut's plunderludics</a> uses this mainly`,
   techniques: [
     'write-input',
     'read-ram',
