@@ -3,5 +3,6 @@ module.exports = {
   experiments: [
     'mario-lylat-system',
     'mario-flicker',
+    'mario-ghost',
   ]
 }
