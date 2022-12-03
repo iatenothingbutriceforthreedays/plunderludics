@@ -102,7 +102,12 @@ const makeLink = (href, content, style) => {
 
 nunjucksEnvironment.addFilter(
   "link_category",
-  (content, category) => makeLink(`/${category}/index.html`, content)
+  (content, category) => {
+    // this is a hack,
+    // TODO do it better (metadata for each category)
+    content = content.replace("-"," ");
+    return makeLink(`/${category}/index.html`, content)
+  }
 );
 
 // usage:
