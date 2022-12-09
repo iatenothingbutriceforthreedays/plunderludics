@@ -73,3 +73,13 @@ permalink: '{{ thingId }}.html'
 <br>
 
 {{ category | link_category(category) }}
+
+
+{# spit out thing data for debug #}
+{% for i in range(0, 40) %}
+  <br>
+{% endfor %}
+
+<pre style="white-space: pre-wrap;">
+  {{ thing | dump(2) }}
+</pre>

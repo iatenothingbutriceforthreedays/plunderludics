@@ -35,9 +35,9 @@ const pick = (objs, key) => {
 
 const objValues = (obj) => Object.values(obj);
 
-const selectByCategory = (things, category) => objFilter(
+const selectByCategoryId = (things, categoryId) => objFilter(
   things,
-  (t => t.category == category)
+  (t => t.category == categoryId)
 );
 
 const getThing = thingId => {
@@ -86,7 +86,7 @@ const utils = {
   uniq,
   pick,
   objValues,
-  selectByCategory,
+  selectByCategoryId,
   showThing,
   linkThing,
   getThing
@@ -103,9 +103,6 @@ const makeLink = (href, content, style) => {
 nunjucksEnvironment.addFilter(
   "link_category",
   (content, category) => {
-    // this is a hack,
-    // TODO do it better (metadata for each category)
-    content = content.replace("-"," ");
     return makeLink(`/${category}/index.html`, content)
   }
 );

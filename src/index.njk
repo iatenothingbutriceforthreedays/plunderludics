@@ -18,9 +18,9 @@ layout: page.njk
 </div>
 
 <ul>
-{% for category in categories %}
+{% for category_id, category in categories %}
   <li>
-  {{ category | link_category(category) }}
+  {{ category.name | link_category(category_id) }}
   </li>
 {% endfor %}
 </ul>
@@ -30,10 +30,6 @@ layout: page.njk
 {% for i in range(0, 40) %}
   <br>
 {% endfor %}
-
-<pre style="white-space: pre-wrap;">
-{{ categories | dump(2) }}
-</pre>
 
 <pre style="white-space: pre-wrap;">
 {{ things | dump(2) }}

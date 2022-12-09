@@ -3,13 +3,19 @@ layout: page.njk
 pagination:
   data: categories
   size: 1
-  alias: category
-permalink: '{{ category }}/index.html'
+  alias: categoryId
+permalink: '{{ categoryId }}/index.html'
 #        {# e.g: techniques/index.html #}
 ---
-<h1>{{ category }}</h1>
+{% set category = categories[categoryId] %}
 
-{% set theseThings = u.selectByCategory(things, category) %}
+<h1>{{ category.name }}</h1>
+
+<div>
+  {{ category.description | render | safe }}
+</div>
+
+{% set theseThings = u.selectByCategoryId(things, categoryId) %}
 
 {% set subcategories = u.uniq(u.pick(u.objValues(theseThings), "subcategory")) %}
 {# this also creates a null subcategory for things w no defined subcategory #}
@@ -41,3 +47,12 @@ permalink: '{{ category }}/index.html'
 <br>
 <br>
 <a href="/">plunderludics</a>
+
+{# spit out thing data for debug #}
+{% for i in range(0, 40) %}
+  <br>
+{% endfor %}
+
+<pre style="white-space: pre-wrap;">
+{{ category | dump(2) }}
+</pre>

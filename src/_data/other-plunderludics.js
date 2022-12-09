@@ -1,18 +1,4 @@
-const { description } = require("./experiments/linked-jumps")
-
 module.exports = {
-  "octopad": {
-    name: "octopad",
-    author: "Patrick Lemieux",
-    url: "http://patrick-lemieux.com/projects/Octopad/",
-    description: "its an nes, but the controller is split into 8, each with a single button"
-  },
-  "platform-games": {
-    name: "Platform Games",
-    author: "Patrick Lemieux",
-    url: "http://patrick-lemieux.com/LeMieux-Platform_Games.pdf",
-    description: "many different approaches to looking at the original mario bros, inclusing a response to super mario clouds"
-  },
   "sonic-but": {
     name: "Sonic but every time you pick a ring it changes games",
     author: "Alistair Aitcheson",
@@ -99,6 +85,21 @@ module.exports = {
   "plundercore": {
     name: "Plundercore",
     url: "https://itch.io/c/2861178/plundercore",
-    description: `from the itch page: "Games made up of stolen pieces from recognizable works that recontextualize those pieces into new and beautiful things, often playing off of their pre-existing meanings and contexts. Transcending shitpost games into legitimately meaningful art. This is not a comprehensive list, or a strict definition.". this will be used to describe things that use the aesthetic of plunderludics, but the games/videogames are made from scratch.`
-  }
+    description: `from the itch page: "Games made up of stolen pieces from recognizable works that recontextualize those pieces into new and beautiful things, often playing off of their pre-existing meanings and contexts. Transcending shitpost games into legitimately meaningful art. This is not a comprehensive list, or a strict definition.". this will be used to describe things that use the aesthetic of plunderludics, but the games/videogames are made from scratch.`,
+    subcategory: "almost-plunderludic"
+  },
+  "octopad": {
+    name: "octopad",
+    author: "Patrick Lemieux",
+    url: "http://patrick-lemieux.com/projects/Octopad/",
+    description: "its an nes, but the controller is split into 8, each with a single button",
+    subcategory: "almost-plunderludic"
+  },
+  "platform-games": {
+    name: "Platform Games",
+    author: "Patrick Lemieux",
+    url: "http://patrick-lemieux.com/LeMieux-Platform_Games.pdf",
+    description: "many different approaches to looking at the original mario bros, inclusing a response to super mario clouds",
+    subcategory: "almost-plunderludic"
+  },
 }

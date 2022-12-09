@@ -87,7 +87,7 @@ const listFileTreeRecursive = dir => {
 
 const getThings = () => {
   const dataDir = "./src/_data/"
-  const ignore = new Set(['things.js', 'categories.js']);
+  const ignore = new Set(['things.js']);
   const fileTree = listFileTreeRecursive(dataDir);
   const loadModulesInTree = entry => {
     if (entry.entries !== undefined) {
