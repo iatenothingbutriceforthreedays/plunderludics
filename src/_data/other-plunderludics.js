@@ -19,8 +19,9 @@ module.exports = {
     subcategory: "digital"
   },
   "nes-pinball-tas": {
-    name: "the NES pinball TAS thing",
-    description: "finding the speedrun for another game that maximizes the score for NES pinball)",
+    name: "the NES pinball TAS",
+    description: "finding the TAS movie for another game that maximizes the score for NES pinball)",
+    url: "https://tasvideos.org/Forum/Topics/1490?CurrentPage=1&PageSize=25&Sort=CreateTimestamp",
     subcategory: "digital"
   },
   "4-megamans": {

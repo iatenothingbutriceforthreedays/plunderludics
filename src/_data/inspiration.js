@@ -31,4 +31,10 @@ module.exports = {
     url: "https://desktop-metaphor.itch.io/longpig",
     description: "plundercomics"
   }
+  'any-austin': {
+    name: "any austin youtube channel",
+    author: "any austin",
+    url: "https://www.youtube.com/watch?v=OV_ZN-8uy4w",
+    description: "appreciating skyboxes, unremarkable and odd places, and things you've never seen before in multiple games"
+  }
 };
