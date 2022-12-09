@@ -104,4 +104,16 @@ module.exports = {
     description: "many different approaches to looking at the original mario bros, inclusing a response to super mario clouds",
     subcategory: "almost-plunderludic"
   },
+  "rom-check-fail": {
+    name: "ROM CHECK FAIL",
+    author: "Farbs",
+    url: "http://www.farbs.org/romcheckfail.php",
+    subcategory: "almost-plunderludic"
+  },
+  "many-worlds-mario": {
+    name: "Many-Worlds Mario",
+    author: "Andi McClure",
+    url:"https://msm.runhello.com/p/20",
+    subcategory: "almost-plunderludic"
+  }
 }

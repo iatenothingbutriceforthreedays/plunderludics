@@ -49,19 +49,19 @@ permalink: '{{ thingId }}.html'
 {% endfor %}
 
 {# Show all the relations to things in other categories #}
-{% for otherCategory in categories %}
-  {% if thing[otherCategory] %}
-  <h3> {{ otherCategory }} </h3> 
-  {# TODO would be nice to customise this header text - e.g. a tool is 'useful for' x y z techniques #}
-  <ul>
-    {% for otherThingId in thing[otherCategory] %}
-      <li>
-        {{ link_thing('/'+otherCategory+'/'+otherThingId) }} 
-        {# should really have a method for constructing the path #}
-        {# TODO would be nice to show an image here if available/appropriate #} 
-      </li>
-    {% endfor %}
-  </ul>
+{% for otherCategoryId, otherCategory in categories %}
+  {% if thing[otherCategoryId] %}
+    <h3> {{ otherCategory | show_thing }} </h3> 
+    {# TODO would be nice to customise this header text - e.g. a tool is 'useful for' x y z techniques #}
+    <ul>
+      {% for otherThingId in thing[otherCategoryId] %}
+        <li>
+          {{ link_thing('/'+otherCategoryId+'/'+otherThingId) }} 
+          {# should really have a method for constructing the path #}
+          {# TODO would be nice to show an image here if available/appropriate #} 
+        </li>
+      {% endfor %}
+    </ul>
   {% endif %}
 {% endfor %}
 
