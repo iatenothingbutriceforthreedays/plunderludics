@@ -15,7 +15,7 @@ module.exports = {
   },
   'inspiration': {
     name: "inspiration",
-    description: "things we have been inspired by or borrowed from"
+    description: "things we have been borrowed from or been inspired by"
   },
   "techniques": {
     name: "techniques",
