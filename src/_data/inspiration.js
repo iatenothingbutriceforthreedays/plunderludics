@@ -30,5 +30,20 @@ module.exports = {
     author: "Desktop Metaphor",
     url: "https://desktop-metaphor.itch.io/longpig",
     description: "plundercomics"
+  },
+  'running memories': {
+    name: "running memories",
+    author: "increpare",
+    url: "https://www.increpare.com/2017/08/running_memories/"
+  },
+  'sechniquexz': {
+    name: 'sechniquexz',
+    author: 'yeongrak',
+    url: 'https://www.youtube.com/watch?v=S85S5q-MpXA'
+  },
+  'aminonaomi-collage': {
+    name: 'aminonaomi collages',
+    author: 'aminonaomi',
+    url: 'https://www.instagram.com/animonaomi/'
   }
 };
