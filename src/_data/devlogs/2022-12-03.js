@@ -28,6 +28,10 @@ module.exports = {
       src: '/documentation/2022-12-03/tonytony1.mp4',
     }, 
     {
+      type: "image",
+      src: '/documentation/2022-12-03/tonytony2.png',
+    }, 
+    {
       type: "video",
       src: '/documentation/2022-12-03/violence-medium1.mp4',
     }, 
