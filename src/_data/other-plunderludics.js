@@ -5,6 +5,13 @@ module.exports = {
     url: "https://twitter.com/agAitcheson/status/1309157251668676609",
     subcategory: "digital"
   },
+  "lavender-town": {
+    name: "Journey to Lavender Town",
+    author: "Alistair Aitcheson",
+    description: "pokemon mod where the game slowly gets corrupted over time, ending in lavender town",
+    url: "https://aitchesongames.blogspot.com/2019/09/a-journey-to-lavender-town.html",
+    subcategory: "digital"
+  },
   "multibowl": {
     name: "Multibowl",
     author: "Bennett Foddy and AP Thompson",
@@ -41,6 +48,18 @@ module.exports = {
       url: "http://www.gamevideoart.org/",
       subcategory: "machinima",
       description: `a show collecting a bunch of machinima art`
+  },
+  "randomizers": {
+    name: "randomizers",
+    url: "https://www.debigare.com/randomizers/",
+    subcategory: "speedrun/challenge",
+    description: "modification of videogames in which items/places appear in random order, chaning the challenge."
+  },
+  "archipelago": {
+    name: "archipelago",
+    url: "https://archipelago.gg",
+    subcategory: "speedrun/challenge",
+    description: "a multi-game multi-player randomizer, where items are sent from one game to another"
   },
   "miltos-manetas": {
     name: "Miltos Manetas' Art After Videogames",
