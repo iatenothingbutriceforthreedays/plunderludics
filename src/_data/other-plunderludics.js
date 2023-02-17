@@ -35,6 +35,18 @@ module.exports = {
     name: "Machinima",
     subcategory: "digital",
   },
+  "libsm64-unity": {
+    url: "https://github.com/libsm64/libsm64-unity",
+    name: "libsm64-unity",
+    description: "decompiled Mario 64 character controller for using in ",
+    subcategory: "digital"
+  },
+  "mario-myst": {
+    url: "https://cohost.org/isyourguy/post/69245-mystposting",
+    name: "mario in myst",
+    description: "Mario 64 romhack w recreated Myst island",
+    subcategory: "digital"
+  },
   "game-video-art": {
       name: "GAME VIDEO/ART: A SURVEY",
       url: "http://www.gamevideoart.org/",
@@ -51,7 +63,7 @@ module.exports = {
     name: "Cadence",
     author: "Baden Pailthorpe",
     url: "https://www.badenpailthorpe.com/cadence/otqegplsdtare63f8wjfvdtbixoz0k",
-    subcategory: "video art"
+    subcategory: "almost-plunderludic"
   },
   "jazztronauts": {
     name: "Jazztronauts",
