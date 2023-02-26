@@ -1,3 +1,5 @@
+const { description } = require("./devlogs/2023-02-25");
+
 module.exports = {
   "sonic-but": {
     name: "Sonic but every time you pick a ring it changes games",
@@ -90,6 +92,12 @@ module.exports = {
     url: "https://steamcommunity.com/sharedfiles/filedetails/?id=1452613192",
     subcategory: "digital",
     description: "probably the most closes to a full blown Videogame thing in this list, a gary's mod map in which you scout random other maps from the steam workshop for multiple kinds of items."
+  },
+  "nespectre": {
+    name: "NESpectre",
+    url: "https://andrewreitano.com/posts/nespectre/",
+    subcategory: "hardware",
+    description: "nes hardware mod that allows network conntected memory modification",
   },
 
   // i bet jodi has something, Jesper Juuls chaper on art on Handmade pixels definitely has some stuff as well about art with games.
