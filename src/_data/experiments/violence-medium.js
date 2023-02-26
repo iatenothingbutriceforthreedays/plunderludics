@@ -26,7 +26,7 @@ module.exports = {
     'write-input',
     'write-ram',
     'chroma-key',
-    'transform',
+    'transform', 
   ],
   inspiration: [
     'animonaomi-collage'

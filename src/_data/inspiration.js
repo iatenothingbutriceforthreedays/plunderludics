@@ -41,9 +41,9 @@ module.exports = {
     author: 'yeongrak',
     url: 'https://www.youtube.com/watch?v=S85S5q-MpXA'
   },
-  'aminonaomi-collage': {
-    name: 'aminonaomi collages',
-    author: 'aminonaomi',
+  'animonaomi-collage': {
+    name: 'animonaomi collages',
+    author: 'animonaomi',
     url: 'https://www.instagram.com/animonaomi/'
   }
   'any-austin': {
