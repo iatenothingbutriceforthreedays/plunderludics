@@ -45,7 +45,7 @@ module.exports = {
     name: 'animonaomi collages',
     author: 'animonaomi',
     url: 'https://www.instagram.com/animonaomi/'
-  }
+  },
   'any-austin': {
     name: "any austin youtube channel",
     author: "any austin",

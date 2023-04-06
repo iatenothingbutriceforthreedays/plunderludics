@@ -21,12 +21,7 @@ module.exports = {
     url: "http://www.foddy.net/2016/08/multibowl/",
     subcategory: "digital"
   },
-  "tbaao": {
-    name: "Tetris, but all at once",
-    author: "Jonny Hopkins",
-    url: "https://twitter.com/jwhopkin/status/1499157430651039748",
-    subcategory: "digital"
-  },
+
   "nes-pinball-tas": {
     name: "the NES pinball TAS",
     description: "finding the TAS movie for another game that maximizes the score for NES pinball)",
@@ -154,5 +149,11 @@ module.exports = {
     author: "Andi McClure",
     url:"https://msm.runhello.com/p/20",
     subcategory: "almost-plunderludic"
+  },
+  "three-skeletons":{
+    name:"Three Skeletons",
+    author: "Lawra Suits Clark",
+    url: "https://twentycapitalletters.com/Three-Skeletons",
+    subcategory: "digital"
   }
 }
