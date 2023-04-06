@@ -1,0 +1,274 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+
+  <body>
+    
+  
+
+
+
+<h1>tapestry</h1>
+
+<div>
+  
+
+  
+  moving accross multiple (n64 and psx) third person games as their video output fading between them.
+  multiple games are placed in space in relation to one another, as the player moved, the three closest games in space get interpolated on the screen, creating an
+
+  tapestry 1-3: experiments with four games and manually modifying the blend factor.
+    1. two modes of interaction: playing the games and choosing what game was being focused on.
+    2. using vcv rack to modulate the fading over time
+    3. using vcv rack to control and modulate the games with similar oscillations
+  games: gex, mario 64, spiderman, ocarina of time
+
+
+  tapestry 4: fully fledged tapestry of 16 games backed by invisible character that receives same input as rest
+  games: mario 64, spiderman, ocarina of time
+  
+  
+</div>
+
+<div>
+
+
+  
+    <video controls>
+      
+      <source src='https://github.com/iatenothingbutriceforthreedays/plunderludics/blob/main/src//documentation/2023-02-25/tapestry1.mp4?raw=true' type="video/mp4" />
+    </video>
+  
+  <br>
+
+
+
+
+  
+
+  
+
+  
+    <h3> inspiration </h3> 
+    
+    <ul>
+      
+    </ul>
+  
+
+  
+    <h3> techniques </h3> 
+    
+    <ul>
+      
+        <li>
+          <a href=/techniques/video interpolation.html style="color: red">video interpolation</a> 
+          
+           
+        </li>
+      
+        <li>
+          <a href=/techniques/video oscillation.html style="color: red">video oscillation</a> 
+          
+           
+        </li>
+      
+        <li>
+          <a href=/techniques/same input multiple games.html style="color: red">same input multiple games</a> 
+          
+           
+        </li>
+      
+        <li>
+          <a href=/techniques/multiple tracks.html style="color: red">multiple tracks</a> 
+          
+           
+        </li>
+      
+        <li>
+          <a href=/techniques/compositing.html style="color: red">compositing</a> 
+          
+           
+        </li>
+      
+        <li>
+          <a href=/techniques/overlaying.html style="color: red">overlaying</a> 
+          
+           
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <h3> tools </h3> 
+    
+    <ul>
+      
+        <li>
+          <a href=/tools/bizhawk.html style="">BizHawk</a> 
+          
+           
+        </li>
+      
+        <li>
+          <a href=/tools/unity.html style="color: red">unity</a> 
+          
+           
+        </li>
+      
+        <li>
+          <a href=/tools/osc.html style="">OSC</a> 
+          
+           
+        </li>
+      
+    </ul>
+  
+
+  
+    <h3> devlogs </h3> 
+    
+    <ul>
+      
+        <li>
+          <a href=/devlogs/2023-02-25.html style="">spring salad: a plunderludic gathering 2023-02-25</a> 
+          
+           
+        </li>
+      
+    </ul>
+  
+
+
+
+</div>
+
+<br>
+<br>
+<br>
+
+<a href=/experiments/index.html style="">experiments</a>
+
+
+
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+  <br>
+
+
+<pre style="white-space: pre-wrap;">
+  {
+  &quot;name&quot;: &quot;tapestry&quot;,
+  &quot;description&quot;: &quot;\n  moving accross multiple (n64 and psx) third person games as their video output fading between them.\n  multiple games are placed in space in relation to one another, as the player moved, the three closest games in space get interpolated on the screen, creating an\n\n  tapestry 1-3: experiments with four games and manually modifying the blend factor.\n    1. two modes of interaction: playing the games and choosing what game was being focused on.\n    2. using vcv rack to modulate the fading over time\n    3. using vcv rack to control and modulate the games with similar oscillations\n  games: gex, mario 64, spiderman, ocarina of time\n\n\n  tapestry 4: fully fledged tapestry of 16 games backed by invisible character that receives same input as rest\n  games: mario 64, spiderman, ocarina of time\n  &quot;,
+  &quot;comments&quot;: &quot;\n  &quot;,
+  &quot;assets&quot;: [
+    {
+      &quot;type&quot;: &quot;video&quot;,
+      &quot;src&quot;: &quot;/documentation/2023-02-25/tapestry1.mp4&quot;
+    }
+  ],
+  &quot;tools&quot;: [
+    &quot;bizhawk&quot;,
+    &quot;unity&quot;,
+    &quot;osc&quot;
+  ],
+  &quot;techniques&quot;: [
+    &quot;video interpolation&quot;,
+    &quot;video oscillation&quot;,
+    &quot;same input multiple games&quot;,
+    &quot;multiple tracks&quot;,
+    &quot;compositing&quot;,
+    &quot;overlaying&quot;
+  ],
+  &quot;inspiration&quot;: [],
+  &quot;id&quot;: &quot;/experiments/tapestry&quot;,
+  &quot;localId&quot;: &quot;tapestry&quot;,
+  &quot;category&quot;: &quot;experiments&quot;,
+  &quot;devlogs&quot;: [
+    &quot;2023-02-25&quot;
+  ]
+}
+</pre>
+  </body>
+</html>
